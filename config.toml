@@ -1,0 +1,76 @@
+theme = "dracula"
+
+[editor]
+cursorline = true
+# guetters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+auto-completion = true
+auto-format = true
+completion-trigger-len = 1
+true-color = true
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+# center = ["file-name"]
+# right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+auto-signature-help = true
+display-signature-help-docs = true
+
+[editor.file-picker]
+hidden = true # Enables ignoring hidden files.
+parents = true # Enables reading ignore files from parent directories.
+ignore = true # Enables reading .ignore files.
+git-ignore = true # Enables reading .gitignore files.
+git-global = true # Enables reading global .gitignore, whose path is specified in git's config: core.excludefile option.
+git-exclude = true # Enables reading .git/info/exclude files.
+# max-depth = None # Set with an integer value for maximum depth to recurse. Defaults to None.
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
+[editor.search]
+smart-case = true # Enable smart case regex searching (case insensitive unless pattern contains upper case characters)
+wrap-around = true # Whether the search should wrap after depleting the matches
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.indent-guides]
+render = true
+character = "│" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[keys.normal]
+C-s = ":w"
+# "space-l-f" = "format"
+
+
+[keys.insert]
+j = { k = "normal_mode" }
+C-x = "no_op"
+C-space = "completion"
